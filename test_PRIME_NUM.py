@@ -10,6 +10,9 @@ class TestPrimeNumbers(unittest.TestCase):
         self.assertEqual(is_prime(2), 2)
     def test_eleven_prime(self):
         self.assertEqual(is_prime(11), 11)
+    def test_float(self):
+        self.assertRaises(TypeError, lambda: is_prime(3.9))
+        #the funcrion is run using lambda to avoid the expected error
     def test_negative(self):
         for item in range(-1, -10, -1):
             self.assertFalse(is_prime(item), msg = '{}You have entered a negative number'.format(item))
