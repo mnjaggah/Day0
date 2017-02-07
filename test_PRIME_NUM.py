@@ -10,11 +10,10 @@ class TestPrimeNumbers(unittest.TestCase):
         self.assertEqual(is_prime(2), 2)
     def test_eleven_prime(self):
         self.assertEqual(is_prime(11), 11)
-    def test_for_floatingNum(self):
-        self.assertFalse(is_prime(3.9))
     def test_negative(self):
-        self.assertFalse(is_prime(-7), msg = 'You have entered a negative number')
-        
+        for item in range(-1, -10, -1):
+            self.assertFalse(is_prime(item), msg = '{}You have entered a negative number'.format(item))
+
 if __name__ == '__main__':
     unittest.main()
 
