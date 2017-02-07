@@ -10,5 +10,5 @@ def is_prime(x):
                     return False
                     break
             else:
-                return True
+                return x
             
