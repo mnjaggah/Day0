@@ -14,4 +14,7 @@ def is_prime(x):
                     break
             else:
                 return x
-            
+
+#function returning a list comprehension to list prime no. in range            
+def prime_range(m,n):
+    return [x for x in range(m, n) if is_prime(x)]
